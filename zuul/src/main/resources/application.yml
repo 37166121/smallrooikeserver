@@ -1,0 +1,23 @@
+server:
+  port: 7700
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: zuul
+zuul:
+  prefix: /api
+  routes:
+    news-route:
+      path: /news/**
+      service-id: news
+    captcha-route:
+      path: /captcha/**
+      service-id: captcha
+    user-route:
+      path: /user/**
+      service-id: user

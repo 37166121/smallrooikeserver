@@ -1,0 +1,17 @@
+server:
+  port: 7600
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: chat
+  #DB Cguration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://www.aliyunm.top:3306/smallrooike?serverTimezone=UTC
+    username: root
+    password: Aa-37166121
